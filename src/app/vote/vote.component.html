@@ -1,0 +1,13 @@
+<div id="vote-container">
+	<select class="form-control vote-select" [(ngModel)]="voter">
+		<option disabled selected value="0">{{ 'i_am' | translate }}</option>
+		<option *ngFor="let voter of voters$ | async" [value]="voter.id">{{ voter.name }}</option>
+	</select>
+	<select class="form-control vote-select" [(ngModel)]="candidate">
+		<option disabled selected value="0">{{ 'i_vote_for' | translate }}</option>
+		<option *ngFor="let candidate of candidates$ | async" [value]="candidate.id">{{ candidate.name }}</option>
+	</select>
+	<button type="button" class="btn btn-primary" (click)="vote()" [disabled]="voter === 0 || candidate === 0">
+		{{ 'vote' | translate }}
+	</button>
+</div>

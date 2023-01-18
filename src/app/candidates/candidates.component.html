@@ -1,0 +1,18 @@
+<div class="table-header mb-2">
+	<p>{{ 'candidates' | translate }}</p>
+	<button type="button" class="btn btn-primary" (click)="addCandidate()">＋</button>
+</div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>{{ 'name' | translate }}</th>
+			<th>{{ 'votes' | translate }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let candidate of candidates$ | async">
+			<td>{{ candidate.name }}</td>
+			<td>{{ candidate.votes }}</td>
+		</tr>
+	</tbody>
+</table>

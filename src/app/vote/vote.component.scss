@@ -1,0 +1,11 @@
+#vote-container {
+	display: flex;
+	select {
+		display: inline;
+	}
+}
+
+.vote-select {
+	margin-right: 0.75rem;
+	width: 12rem;
+}

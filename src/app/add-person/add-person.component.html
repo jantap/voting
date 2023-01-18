@@ -1,0 +1,10 @@
+<div id="add-person-container">
+	<div class="form-group mb-3">
+		<label for="name">{{ 'name' | translate }}</label>
+		<input type="text" class="form-control" id="name" placeholder="John Doe" [(ngModel)]="name" />
+	</div>
+
+	<button type="button" class="btn btn-primary" (click)="add()" [disabled]="name.length === 0">
+		{{ 'add' | translate }}
+	</button>
+</div>
