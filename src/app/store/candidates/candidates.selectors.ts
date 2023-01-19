@@ -1,6 +1,6 @@
 import { Dictionary } from '@ngrx/entity';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { Candidate } from 'src/app/models/candidate';
+import { Candidate } from '../../models/candidate';
 import { State, adapter } from './candidates.state';
 
 export const selectCandidatesState = createFeatureSelector<State>('candidates');

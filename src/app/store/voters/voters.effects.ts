@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, exhaustMap, map, of, tap, withLatestFrom } from 'rxjs';
 import { addVoter, addVoterFailure, addVoterSuccess, vote } from './voters.actions';
-import { Voter } from 'src/app/models/voter';
 import { Store } from '@ngrx/store';
 import { selectVoterCount } from './voters.selectors';
 import { incrementCandidateVotes } from '../candidates/candidates.actions';

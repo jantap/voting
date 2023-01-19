@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Candidate } from 'src/app/models/candidate';
+import { Candidate } from '../../models/candidate';
 
 export const addCandidate = createAction('[Candidates] Add Candidate', props<{ name: string }>());
 export const addCandidateSuccess = createAction(

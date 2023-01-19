@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Voter } from 'src/app/models/voter';
+import { Voter } from '../../models/voter';
 
 export const addVoter = createAction('[Voters] Add Voter', props<{ name: string }>());
 export const addVoterSuccess = createAction('[Voters] Add Voter Success', props<{ voter: Voter }>());
